@@ -10,16 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "competitors")
+@Table(name = "competitors_l")
 @Getter
 @Setter
 public class Competitors {
 
-    @Column(name = "activity", nullable = false)
-    private String name;
+    @Id
+    @Column(name = "id", nullable = false)
+    private Long id;
 
-    @Column(name = "price", nullable = false)
-    private String price;
+    @Column(name = "name", nullable = false)
+    private String name;
 
 
 }

@@ -10,10 +10,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "prices")
+@Table(name = "prices_l")
 @Getter
 @Setter
 public class Prices {
+    @Id
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     @Column(name = "activity", nullable = false)
     private String activity;
