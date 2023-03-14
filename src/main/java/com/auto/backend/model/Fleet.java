@@ -14,9 +14,6 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class Fleet {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
 
     @Column(name = "vehicle_description", nullable = false)
     private String vehicleDescription;

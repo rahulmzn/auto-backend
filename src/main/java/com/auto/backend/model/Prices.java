@@ -14,9 +14,6 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class Prices {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
 
     @Column(name = "activity", nullable = false)
     private String activity;

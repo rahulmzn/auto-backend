@@ -14,12 +14,12 @@ import javax.persistence.Table;
 @Getter
 @Setter
 public class Competitors {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
 
     @Column(name = "activity", nullable = false)
     private String name;
+
+    @Column(name = "price", nullable = false)
+    private String price;
 
 
 }
