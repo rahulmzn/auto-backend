@@ -9,6 +9,7 @@ import com.auto.backend.repository.CompetitorsRepository;
 import com.auto.backend.repository.PriceRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,15 +32,15 @@ public class AutoProvider {
     @Autowired
     PriceRepository priceRepository;
 
-    @GetMapping(value = "/prices")
+    @GetMapping(value = "/prices", produces= MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<List<Prices>> getPrices(){
         return ResponseEntity.ok(priceRepository.findAll());
     }
-    @GetMapping(value = "/competitors")
+    @GetMapping(value = "/competitors", produces=MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<List<Competitors>> getCompetitors(){
         return ResponseEntity.ok(competitorsRepository.findAll());
     }
-    @GetMapping(value = "/fleet")
+    @GetMapping(value = "/fleet", produces=MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<List<Fleet>> getFleet(){
         return ResponseEntity.ok(fleetRepository.findAll());
     }
